@@ -5,9 +5,9 @@ import java.util.*;
 public class Removeduplicate{
     static int removeduplicate(int[] arr){
            HashSet<Integer> set = new HashSet<>();
-        for(int i=0;i<arr.length;i++){
-                set.add(arr[i]);
-            }
+            for(int i=0;i<arr.length;i++){
+                    set.add(arr[i]);
+                }
             int z = set.size();
             int j =0;
             for(int x:set){
@@ -29,24 +29,24 @@ public class Removeduplicate{
 
 // Optimized solution ------------->
 
-public class Removeduplicate{
-    static int removeduplicate(int[] arr){
-        int i=0;
-        for( int j=1;j<arr.length;j++){
-            if(arr[i] != arr[j]){
-                arr[i+1] = arr[j];
-                i++;
-            }
-        }
-        return i+1;
-    }
-    public static void main(String[] args){
-        int[] arr = {1,1,2,3,3,4,4,5,5,6,};
+//public class Removeduplicate{
+//     static int removeduplicate(int[] arr){
+//         int i=0;
+//         for( int j=1;j<arr.length;j++){
+//             if(arr[i] != arr[j]){
+//                 arr[i+1] = arr[j];
+//                 i++;
+//             }
+//         }
+//         return i+1;
+//     }
+//     public static void main(String[] args){
+//         int[] arr = {1,1,2,3,3,4,4,5,5,6,};
 
-        int k = removeduplicate(arr);
+//         int k = removeduplicate(arr);
 
-        for(int j=0;j<k;j++){
-            System.out.print(arr[j]+" ");
-        }
-    }
-}
+//         for(int j=0;j<k;j++){
+//             System.out.print(arr[j]+" ");
+//         }
+//     }
+// }
