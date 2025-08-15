@@ -92,3 +92,84 @@ int main(){
 
 
 // output: 6501  ---> Same at previous questions and Short int value limit is -32767 to 32767.
+
+
+<==== 7 =====>
+
+#include <iostream>
+
+int main() 
+{
+    char str[] = "Arunkumar";
+    
+    char *s1 = str;
+    
+    for(int i=0;i<4;i++){
+      
+      printf("%c\n",*str);
+      
+      s1++;
+    }
+    
+    return 0;
+}
+
+// output: "Arun"   --> str not changed. it will be pointed same value
+
+
+<===== 8 =====>
+
+#include <iostream>
+
+int main() 
+{
+    signed char i =0;
+    
+    for(;i>=0;i++);
+    
+    printf("%d",i);
+    
+    return 0;
+}
+
+// output: -128  -->  signed char limit is -128 to 127
+
+
+<===== 9 =====>
+
+#include <stdio.h>
+
+int main() {
+    char arr[] = {'a','b'};
+    
+    char *p = arr;
+    
+    if(&p == &arr)
+        printf("same");
+    else
+        printf("Not same");
+
+    return 0;
+}
+
+// output: "Not same"    --> p denotes pointer of *p  and arr is denotes first element of array
+
+
+<===== 10 =====>
+
+#include <stdio.h>
+
+int main() {
+    char arr[] = {'a','b'};
+    
+    char *p = arr;
+    
+    if(p == &arr)
+        printf("same");
+    else
+        printf("Not same");
+
+    return 0;
+}
+
+// output: " same"    --> p denotes pointer of arr first element and arr is denotes first element of array
