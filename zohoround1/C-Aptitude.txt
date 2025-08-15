@@ -1,0 +1,46 @@
+<======= 1 ======>
+
+ #include <iostream>
+
+int main() {
+    int i;
+    i=1,2,3;
+    
+    printf("i=%d",i);
+
+    return 0;
+}
+
+//  output:  i = 1  ----> first time stored 1 next 2 stored... we can write only single print so first stored element was printed
+
+
+<======= 2 ======>
+
+#include <iostream>
+
+int main() {
+    int i;
+    i=(1,2,3);
+    printf("i=%d",i);
+
+    return 0;
+}
+
+// output: 3 ---> stored last of the element like 3,  Not lenth
+
+<======= 3 ======>
+
+#include <iostream>
+
+int main() {
+    int c =3,no = 30;
+    do{
+        no /= c;     
+    }while(!c=0);
+
+    printf("%d/n",no);
+
+    return 0;
+}
+
+// output: 10->3->1.....n      (infinity loop because while contition only check !c=0 but c value not reduced so c is same value(3) so, this is infinity loop)
