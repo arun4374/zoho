@@ -44,3 +44,51 @@ int main() {
 }
 
 // output: 10->3->1.....n      (infinity loop because while contition only check !c=0 but c value not reduced so c is same value(3) so, this is infinity loop)
+
+
+<===== 4 =====>
+
+#include <iostream>
+
+#define pod(a,b) a*b
+
+int main() {
+    int x=3,y=4;
+    
+    printf("%d",pod(x+2,y-1));
+
+    return 0;
+}
+
+// output: 10    ---> Basic "BODMAS" rule. First solve bracket then division then multipy and next adition , subraction so, 3+(2*4)-1 = 10
+
+
+<===== 5 =====>
+
+#include <iostream>
+
+int main(){
+    short i = 65000;
+    
+    while(i++ !=0);
+    printf("%d",i);
+}
+
+
+// output: 1  ---> that is not infinity loop because every data type had a limit like INT_MAX this is maximum of limit so, INT_MAX != 0 but i++ increase i value but already i reach thier max value so again reset the value(0). 
+
+
+<===== 6 =====>
+
+
+#include <iostream>
+
+int main(){
+    short i = 6500;
+    
+    while(i++ !=6500);
+    printf("%d",i);
+}
+
+
+// output: 6501  ---> Same at previous questions and Short int value limit is -32767 to 32767.
